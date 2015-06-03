@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="customlistapp">
+	<head>
+		<meta charset="utf-8">
+
+		<title> Testing </title>
+
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+		<!--Custom Style Sheet-->
+		<link rel="stylesheet" type="text/css" media="screen" href="css/customstyle.css">
+
+		<!-- GOOGLE FONT -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+	</head>
+
+	<body class="" ng-controller="SmartAppController">
+		<!-- MAIN PANEL -->
+		<div id="top" class="row">
+			<div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-4 col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5">
+				<div class="">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+			</div>
+		</div>
+
+		<div id="main" role="main" class="row">
+
+			<!-- MAIN CONTENT -->
+			<!--<div id="content" data-ng-view="" class="view-animate"></div>-->
+
+			<!--<div class="col-md-5"></div>-->
+			<div ng-controller="CustomListController" class="col-xs-6 col-xs-offset-3
+															 col-sm-4 col-sm-offset-4
+															 col-md-3 col-md-offset-4
+															 col-lg-3 col-lg-offset-4">
+				<div custom-select="" 	default-item="defaultItem"
+					 					list-model="listOfFruits"
+										selected-mode="selectedMode"
+										on-close="onCloseEventHandler(data)">
+				</div>
+
+				<script type="text/ng-template" id="myModalContent.html">
+					<div >
+						<div class="modal-header">
+							<h3 class="modal-title">Fruit</h3>
+						</div>
+						<div class="modal-body">
+							<h2>I am {{item.name}}!</h2>
+							<!--<img src="img/ + {{item.name}} + .png" />&nbsp;&nbsp; <h2>I am {{item.name}}!</h2>-->
+						</div>
+						<div class="modal-footer">
+							<button class="btn button" ng-click="ok()">OK</button>
+						</div>
+					</div>
+				</script>
+			</div>
+			<!--<div class="col-md-5"></div>-->
+
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+
+		<!--================================================== -->
+
+
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script>
+			if (!window.jQuery) {
+				document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+			}
+		</script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script>
+			if (!window.jQuery.ui) {
+				document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+			}
+		</script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">-->
+
+		<!-- AngularJS Resource Files-->
+
+		<!--Local repository definitions-->
+		<!--<script src="js/libs/angular/angular.js"></script>-->
+	  	<!--<script src="js/libs/angular/angular-route.js"></script>-->
+	  	<!--<script src="js/libs/angular/angular-animate.js"></script>-->
+		<!--<script src="js/libs/angular/ui-bootstrap-custom-tpls-0.11.0.js"></script>-->
+
+		<!--Remote definitions-->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+		<!-- MAIN ANGULAR JS FILE -->
+	  	<script src="js/ng/ng.app.js"></script>
+	  	<script src="js/ng/ng.controllers.js"></script>
+	  	<script src="js/ng/ng.directives.js"></script>
+
+	</body>
+
+</html>
